@@ -1,22 +1,22 @@
 **1. 构造函数可以是虚函数吗**
 
-virtual call is a mechanism to get work done given partial
-information. In particular, "virtual" allows us to call a
-function knowing only an interfaces and not the exact type of the
-object. To create an object you need complete information. In
-particular, you need to know the exact type of what you want to
-create. Consequently, a "call to a constructor" cannot be
-virtual.
+	virtual call is a mechanism to get work done given partial
+	information. In particular, "virtual" allows us to call a
+	function knowing only an interfaces and not the exact type of the
+	object. To create an object you need complete information. In
+	particular, you need to know the exact type of what you want to
+	create. Consequently, a "call to a constructor" cannot be
+	virtual.
 
 
 **2. 成员函数可以调用delete this吗？为什么？**
 		 析构函数里面不可以
      
-3. 四种类型转换？static_cast向上向下转换时的会出现什么问题。dynamic_cast失败的话会怎样。
+**3. 四种类型转换？static_cast向上向下转换时的会出现什么问题。dynamic_cast失败的话会怎样。**
 
 **4. 成员函数里memset(this,0,sizeof(*this))会发生什么**
 
-一个C++类中除了需要空间来存放数据成员之外，还可能保存着虚函数表指针S，偏移量等信息，一但你memset之后全都没有了。所以这是错误的行为。
+	一个C++类中除了需要空间来存放数据成员之外，还可能保存着虚函数表指针S，偏移量等信息，一但你memset之后全都没有了。所以这是错误的行为。
 		
 5. 菱形的多继承下虚函数的内存结构
 
@@ -26,7 +26,7 @@ virtual.
 
 8. 图片拓扑流听过吗？像百度图片那样的。你会如何设计客户端？
 
-**9. string a；字符串a这是存在哪里的。为什么在a在栈上，但是在动态增长的时候，栈不会溢出？**
+9. string a；字符串a这是存在哪里的。为什么在a在栈上，但是在动态增长的时候，栈不会溢出？
 
 10. 为什么delete []就可以删除整个数组。char *p = new char[32]; 如果用delete p，会发生什么
 
